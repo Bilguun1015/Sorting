@@ -17,14 +17,14 @@ print(selection_sort([9,3,5,4,7,5,1]))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-    isSorted = False
+    isSwapped = False
     for i in range(0, len(arr)):
         cur_index = i
         for num in range(0,  cur_index):
             if arr[num] > arr[num+1]:
-                isSorted = True
+                isSwapped = True
                 arr[num+1], arr[num] = arr[num], arr[num + 1]
-                if isSorted :
+                if isSwapped :
                     bubble_sort(arr)
     return arr
 
